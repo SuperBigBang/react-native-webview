@@ -149,7 +149,7 @@ You can inject some JavaScript to wrap the history functions in order to interce
 />
 ```
 
-Thanks to [Janic Duplessis](https://github.com/SuperBigBang/react-native-webview/issues/24#issuecomment-483956651) for this workaround.
+Thanks to [Janic Duplessis](https://github.com/react-native-community/react-native-webview/issues/24#issuecomment-483956651) for this workaround.
 
 ### Add support for File Upload
 
@@ -281,7 +281,7 @@ export default class App extends Component {
         <WebView
           source={{
             uri:
-              'https://github.com/SuperBigBang/react-native-webview',
+              'https://github.com/react-native-community/react-native-webview',
           }}
           injectedJavaScript={runFirst}
         />
@@ -297,7 +297,7 @@ This runs the JavaScript in the `runFirst` string once the page is loaded. In th
 
 _Under the hood_
 
-> On iOS, `injectedJavaScript` runs a method on WebView called `evaluateJavaScript:completionHandler:`
+> On iOS, `injectedJavaScript` runs a method on WKWebView called `evaluateJavaScript:completionHandler:`
 > On Android, `injectedJavaScript` runs a method on the Android WebView called `evaluateJavascriptWithFallback`
 
 #### The `injectJavaScript` method
@@ -326,7 +326,7 @@ export default class App extends Component {
           ref={r => (this.webref = r)}
           source={{
             uri:
-              'https://github.com/SuperBigBang/react-native-webview',
+              'https://github.com/react-native-community/react-native-webview',
           }}
         />
       </View>
@@ -341,12 +341,12 @@ After 3 seconds, this code turns the background blue:
 
 _Under the hood_
 
-> On iOS, `injectJavaScript` calls WebView's `evaluateJS:andThen:`
+> On iOS, `injectJavaScript` calls WKWebView's `evaluateJS:andThen:`
 > On Android, `injectJavaScript` calls Android WebView's `evaluateJavascriptWithFallback` method
 
 #### The `window.ReactNativeWebView.postMessage` method and `onMessage` prop
 
-Being able to send JavaScript to the web page is great, but what about when the web page wants to communicate back to your React Native code? This is where `window.ReactNativeWebView.postMessage` and the `onMessage` prop come in.
+Being able to send JavaScript to the web page is great, but what about when the web page wants to communicate back to your React Native code? This where `window.ReactNativeWebView.postMessage` and the `onMessage` prop come in.
 
 You _must_ set `onMessage` or the `window.ReactNativeWebView.postMessage` method will not be injected into the web page.
 
