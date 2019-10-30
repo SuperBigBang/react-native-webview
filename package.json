@@ -9,7 +9,7 @@
   ],
   "license": "MIT",
   "version": "7.4.3",
-  "homepage": "https://github.com/react-native-community/react-native-webview#readme",
+  "homepage": "https://github.com/SuperBigBang/react-native-webview#readme",
   "scripts": {
     "ci": "CI=true && yarn lint && yarn test",
     "ci:publish": "yarn semantic-release",
@@ -57,7 +57,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/react-native-community/react-native-webview.git"
+    "url": "https://github.com/SuperBigBang/react-native-webview.git"
   },
   "files": [
     "android",
@@ -66,5 +66,8 @@
     "index.js",
     "index.d.ts",
     "react-native-webview.podspec"
-  ]
+  ],
+  "precommit": [
+  "build"
+]
 }

@@ -149,7 +149,7 @@ You can inject some JavaScript to wrap the history functions in order to interce
 />
 ```
 
-Thanks to [Janic Duplessis](https://github.com/react-native-community/react-native-webview/issues/24#issuecomment-483956651) for this workaround.
+Thanks to [Janic Duplessis](https://github.com/SuperBigBang/react-native-webview/issues/24#issuecomment-483956651) for this workaround.
 
 ### Add support for File Upload
 
@@ -281,7 +281,7 @@ export default class App extends Component {
         <WebView
           source={{
             uri:
-              'https://github.com/react-native-community/react-native-webview',
+              'https://github.com/SuperBigBang/react-native-webview',
           }}
           injectedJavaScript={runFirst}
         />
@@ -326,7 +326,7 @@ export default class App extends Component {
           ref={r => (this.webref = r)}
           source={{
             uri:
-              'https://github.com/react-native-community/react-native-webview',
+              'https://github.com/SuperBigBang/react-native-webview',
           }}
         />
       </View>

@@ -59,7 +59,7 @@ static NSDictionary* customCertificatesForHost;
   BOOL _savedKeyboardDisplayRequiresUserAction;
 
   // Workaround for StatusBar appearance bug for iOS 12
-  // https://github.com/react-native-community/react-native-webview/issues/62
+  // https://github.com/SuperBigBang/react-native-webview/issues/62
   BOOL _isFullScreenVideoOpen;
   UIStatusBarStyle _savedStatusBarStyle;
   BOOL _savedStatusBarHidden;
@@ -102,7 +102,7 @@ static NSDictionary* customCertificatesForHost;
       name:UIKeyboardWillShowNotification object:nil];
 
     // Workaround for StatusBar appearance bug for iOS 12
-    // https://github.com/react-native-community/react-native-webview/issues/62
+    // https://github.com/SuperBigBang/react-native-webview/issues/62
       [[NSNotificationCenter defaultCenter] addObserver:self
                                                selector:@selector(showFullScreenVideoStatusBars)
                                                    name:UIWindowDidBecomeVisibleNotification
